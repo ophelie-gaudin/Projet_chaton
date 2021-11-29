@@ -115,9 +115,6 @@ GEM
     msgpack (1.4.2)
     msgpack (1.4.2-java)
     nio4r (2.5.8)
-<<<<<<< HEAD
-    nokogiri (1.12.5-arm64-darwin)
-=======
     nio4r (2.5.8-java)
     nokogiri (1.12.5)
       mini_portile2 (~> 2.6.1)
@@ -127,7 +124,6 @@ GEM
     nokogiri (1.12.5-x64-mingw32)
       racc (~> 1.4)
     nokogiri (1.12.5-x86-mingw32)
->>>>>>> development
       racc (~> 1.4)
     nokogiri (1.12.5-x86_64-linux)
       racc (~> 1.4)

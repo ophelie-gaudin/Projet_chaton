@@ -7,9 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require'faker'
 4.times do 
-  Items.create(
+  Item.create(
     title: Faker::Lorem.sentence(word_count: 3),
-    text: Faker::Lorem.paragraph(sentence_count: 3),
-    price: Faker::Number.decimal_part(digits: 2),
-    
+    description: Faker::Lorem.paragraph(sentence_count: 3),
+    price: Faker::Number.decimal_part(digits: 2)
   )
+end
