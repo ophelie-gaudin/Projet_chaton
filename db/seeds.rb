@@ -10,6 +10,7 @@ require'faker'
   Item.create(
     title: Faker::Lorem.sentence(word_count: 3),
     description: Faker::Lorem.paragraph(sentence_count: 3),
-    price: Faker::Number.decimal_part(digits: 2)
+    price: Faker::Number.decimal(l_digits: 2),
+    image_url: "blabla"
   )
 end
