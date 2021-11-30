@@ -1,15 +1,17 @@
 module ApplicationHelper
 
   def create_cart(user)
-    if(@cart = Cart.find_by(user: current_user))
-      puts "$$$$$$$$$$$$$$$"
-      puts "A cart already exists : "
-      puts @cart
-    else
-      @cart = Cart.create(user_id: current_user.id)
-      puts "$$$$$$$$$$$$$$$"
-      puts "A cart is created : "
-      puts @cart
+    if (current_user)
+      @cart = Cart.find_by(user_id: current_user.id)
+
+      if (@cart)
+        puts "$$$$$$$$$$$$$$$"
+        puts "A cart already exists : "
+      else
+        @cart = Cart.create(user_id: current_user.id)
+        puts "$$$$$$$$$$$$$$$"
+        puts "A cart is created : "
+      end
     end
   end
   

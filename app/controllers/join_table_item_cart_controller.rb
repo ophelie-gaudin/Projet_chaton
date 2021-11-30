@@ -6,7 +6,10 @@ class JoinTableItemCartController < ApplicationController
   end
 
   def create
-    @relation = JoinTableItemCart.create(cart: Cart.find_by(user: current_user), item: params[:item_id])
+    @relation = JoinTableItemCart.create(cart_id: Cart.find_by(user_id: current_user.id).id, item_id: Item.find(params[:item_id].to_i).id)
+    puts "################"
+    puts @relation
+    puts "relation établie! :)"
   end
   
 end
