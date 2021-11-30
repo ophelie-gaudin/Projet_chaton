@@ -17,6 +17,8 @@
         <a class="btn btn-outline-info" role="button">Supprimer</a><br /> 
         <%#= link_to 'Voir la description', item_path(), method :get %>
         <%#= link_to 'Supprimer du panier' %>
+        <%= link_to "Supprimer du panier", item_join_table_item_cart_path(item.id), method: :delete %>
+
       </div>
       </div>
 

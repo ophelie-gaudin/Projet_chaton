@@ -1,8 +1,9 @@
 class JoinTableItemCartController < ApplicationController
   def destroy
-    @relation = Cart.findBy(user: User.last).items
-    puts "###################################################"
-    puts @relations
+    cart_id = Cart.find_by(user_id: current_user.id).id
+    puts "Cart_id ="
+    puts cart_id
+    JoinTableItemCart.where(cart_id: cart_id, item_id: params[:item_id]).destroy_all
   end
 
   def create
