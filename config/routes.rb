@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :home
   root to: 'home#index'
   devise_for :users
+  resources :user 
   resources :cart
   resources :join_table_item_cart
 
