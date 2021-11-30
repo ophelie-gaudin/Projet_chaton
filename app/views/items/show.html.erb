@@ -6,6 +6,7 @@
     <div class= "m-4" style="width: 100rem" >
       <div class="card ">
         <h3 class="card-header title"><%=@item.title%></h3>
+
         <div class="card-body">
           <h5 class="card-title price"><%=@item.price%> €</h5>
         </div>
@@ -22,7 +23,6 @@
       
         <%= link_to "Ajouter au panier", item_join_table_item_cart_index_path(@item.id), method: :post %>
        
-
       </div>
     </div>
   </div>

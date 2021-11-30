@@ -4,7 +4,7 @@ class ItemsController < ApplicationController
     @random_number= rand(10000)
     @user = User.all.sample
     @item_array = Item.all
-    @event = Item.all
+    @item= Item.all
   end
   
   def show
@@ -14,4 +14,6 @@ class ItemsController < ApplicationController
      @item_price = @item.price
      @item_img = @item.image_url
   end
+
+
 end
