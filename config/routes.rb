@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :orders, only: [:new, :create]
   resources :items
   resources :home
   root to: 'home#index'
