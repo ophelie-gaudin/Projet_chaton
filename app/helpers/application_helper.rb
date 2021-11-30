@@ -6,7 +6,7 @@ module ApplicationHelper
       puts "A cart already exists : "
       puts @cart
     else
-      @cart = Cart.create(user: current_user)
+      @cart = Cart.create(user_id: current_user.id)
       puts "$$$$$$$$$$$$$$$"
       puts "A cart is created : "
       puts @cart
