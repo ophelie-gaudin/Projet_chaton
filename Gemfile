@@ -69,6 +69,5 @@ gem 'devise'
 
 gem 'stripe'
 
-gem 'mailjet'
-
 gem 'dotenv-rails'
+gem 'mailjet'
