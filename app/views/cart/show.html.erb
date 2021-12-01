@@ -1,3 +1,4 @@
+<% if @items.empty? == false%>
 <div class="m-4">
 <h1>Mon panier : </h1>
 
@@ -64,3 +65,6 @@
 </div>
 </div>
 </div>
+<%else%>
+<h1>Votre panier est actuellement vide </h1>
+<%end%>

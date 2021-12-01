@@ -11797,11 +11797,24 @@
    border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
  }
  .jumbotron{
-   background-image: url('https://image.freepik.com/photos-gratuite/chat-blanc-se-trouve-genoux-femme_8353-539.jpg');
-   text-align: center;
-   background-position: center;
+  background-image: url('https://www.studyrama.com/local/cache-vignettes/L990xH363/arton6320-d004a.png?1607624234');
+  text-align: center;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 35vh;
+  height: 46vh;
    
  }
+
+ .content-holder {
+  position: absolute;
+  left: 50%!important;
+  z-index: 10;
+  color:rgb(255, 255, 255) ;
+  text-align: center;
+  top: 25%!important;
+  transform: translate(-50%, -50%);
+  width: fit-content;
+  padding: 50px;
+  font-size: x-large;
+}
