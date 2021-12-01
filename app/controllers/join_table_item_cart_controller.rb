@@ -4,6 +4,8 @@ class JoinTableItemCartController < ApplicationController
     puts "Cart_id ="
     puts cart_id
     JoinTableItemCart.where(cart_id: cart_id, item_id: params[:item_id]).destroy_all
+    redirect_to cart_path
+
   end
 
   def create
