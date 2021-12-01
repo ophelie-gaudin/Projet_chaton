@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :orders, only: [:new, :create]
   get 'join_table_item_cart/destroy'
   resources :items
   resources :home
