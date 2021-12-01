@@ -1,0 +1,21 @@
+Vous avez une nouvelle commande sur La Boutique ChatShop !
+
+@user a reçu le mail suivant :
+
+==========================================================
+
+
+Ta commande à bien été prise en compte !
+==========================================================
+ 
+Voici le contenu de ta commande:
+<% @items.each do |i| %>
+  - <%= Item.find(i.item_id).title %>
+  - 
+  - 
+  <% end %>
+  
+ 
+Conserve bien cet email, il te permet de récupérer tes photos.
+ 
+À très bientôt !

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    Ta commande a bien été pris en compte !
+    <p>
+    Voici le contenu de ta commande:
+    <% @items.each do |i| %>
+      - <%= i.get_item.title %>
+      <% end %>
+    </p>
+    <p>
+    Conserve bien cet email, il te permet de récupérer tes photos.
+    </p>
+    <p> À très bientôt !
+    </p>
+  </body>
+</html>
