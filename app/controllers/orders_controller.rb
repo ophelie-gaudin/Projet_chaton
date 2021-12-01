@@ -33,6 +33,7 @@ class OrdersController < ApplicationController
       flash[:error] = e.message
       redirect_to new_order_path
     end
+    
     # After the rescue, if the payment succeeded
     redirect_to home_path 
   end 
