@@ -1,4 +1,6 @@
 class JoinTableItemCartController < ApplicationController
+  before_action :authenticate_user!, only: [:create]
+
   def destroy
     cart_id = Cart.find_by(user_id: current_user.id).id
     puts "Cart_id ="
