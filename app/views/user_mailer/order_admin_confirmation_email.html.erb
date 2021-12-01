@@ -8,7 +8,7 @@
       Vous avez une nouvelle commande sur La Boutique ChatShop !
     </p>
     <p>
-      @user a reçu le mail suivant :
+      <%= @user %> a reçu le mail suivant :
     </p>
     <p>
       ==========================================================
@@ -17,9 +17,8 @@
     <p>
       Voici le contenu de ta commande:
       <% @items.each do |i| %>
-        - <%= Item.find(i.item_id).title %>
-        - 
-        - 
+      - <%= i.title %>
+      - <img src="<%=i.image_url%>"/>
       <% end %>
     </p>
     <p>

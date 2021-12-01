@@ -8,7 +8,8 @@
     <p>
     Voici le contenu de ta commande:
     <% @items.each do |i| %>
-      - <%= i.get_item.title %>
+      - <%= i.title %>
+      - <img src="<%=i.image_url%>"/>
       <% end %>
     </p>
     <p>
