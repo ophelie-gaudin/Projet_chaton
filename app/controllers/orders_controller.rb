@@ -55,6 +55,7 @@ puts @amount
   end
   
 # After the rescue, if the payment succeeded
+  @relations= JoinTableItemCart.where(cart_id: Cart.find_by(user_id: current_user.id).id).destroy_all
   
   end
 end
