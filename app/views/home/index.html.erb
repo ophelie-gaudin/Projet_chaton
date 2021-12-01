@@ -1,10 +1,14 @@
 <div class="jumbotron" >
   <% if current_user %>
-    <h1 class="display-4 pt-5 ">Bonjour CatFan</h1>
-    <p class="lead">En te souhaitant un agréable voyage sur notre site de vente de photo de chaton de la part de toute l'équipe</p>
+    <div class="content-holder">
+    <h1 class="display-1 pt-5"><strong>Bonjour CatFan</strong></h1>
+    <p class="h2"><strong>En te souhaitant un agréable voyage sur notre site de vente de photo de chaton de la part de toute l'équipe</strong></p>
+  </div>
   <% else %>
+    <div class="content-holder">
     <h1 class="display-4 pt-5 ">Bienvenue sur ChatonShop</h1>
     <p class="lead">Ici tu pourras trouver tout un tas de petite photo de chaton trop mignonne.</p>
+  </div>
   <% end %>
 </div>
 
