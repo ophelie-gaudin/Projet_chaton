@@ -23,6 +23,11 @@
   <div class="d-flex justify-content-around flex-wrap">
  
 <%@items.each do |item|%>
+<%@validate =  item.id.in?(@iditemcart)%>
+<% puts @validate%>
+<% if @validate ==true %>
+
+<% else %>
   <div class='m-4 col-md-3' >
     <div class="card ">
       <h3 class="card-header" name='title'><%=item.title%></h3>
@@ -42,7 +47,7 @@
   </div>
 
 
-
+<%end%>
 <%end%>
 </div>
 </div>
