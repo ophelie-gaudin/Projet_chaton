@@ -4,6 +4,11 @@ class ProfilesController < ApplicationController
   def show
     @user = current_user
     @user_email = current_user.email
+
+    @user_orders = Order.select{ |order| order.user_id = current_user.id }
+    
+
+
   end
 
   def edit
