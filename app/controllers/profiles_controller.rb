@@ -10,11 +10,6 @@ class ProfilesController < ApplicationController
     
   end
 
-  def update    
-    @user.update(user_params)
-    redirect_to home_index_path
-  end
-
   private
 
   def user_params
