@@ -21,7 +21,8 @@ body {
 }
 
 footer {
-  margin-top: 70px;;
+  margin-top: auto;
+  padding-top: 70px;
 }
 
  @import url("https://fonts.googleapis.com/css?family=Neucha|Cabin+Sketch&display=swap");
@@ -11830,6 +11831,7 @@ footer {
   z-index: 10; */
   color:rgb(255, 255, 255) ;
   text-align: center;
+  max-width: 80%;
   /* top: 25%!important;
   transform: translate(-50%, -50%);
   width: fit-content;
