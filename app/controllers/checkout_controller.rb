@@ -26,8 +26,6 @@ class CheckoutController < ApplicationController
     @stripe_amount = 500
     @user = current_user
     @items = @card.items
-    puts @items
-    puts '----------------------------------------'
     total = 0
     @items.each do |item|
       total += item.price
