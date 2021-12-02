@@ -13,9 +13,13 @@
 
   <body>
     <%= render 'layouts/navbar' %>
-    <%= render 'layouts/flash' %>
+    <%= render 'layouts/flash'%>
+    
+    <div>
     <%= yield %>
-    <footer class="align-middle text-center">
+    </div>
+
+    <footer id="footer" class="container">
       <%= render 'layouts/footer' %>
     </footer>
   </body>

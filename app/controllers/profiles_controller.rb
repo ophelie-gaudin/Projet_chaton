@@ -1,9 +1,13 @@
-class UserController < ApplicationController
+class ProfilesController < ApplicationController
   before_action :set_user, only: [:update, :edit, :show]
 
-  def update    
-    @user.update(user_params)
-    redirect_to home_index_path
+  def show
+    @user = current_user
+    @user_email = current_user.email
+  end
+
+  def edit
+    
   end
 
   private
