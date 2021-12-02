@@ -21,7 +21,7 @@ body {
 }
 
 footer {
-  margin-top: auto;
+  margin-top: 70px;;
 }
 
  @import url("https://fonts.googleapis.com/css?family=Neucha|Cabin+Sketch&display=swap");
@@ -11819,7 +11819,7 @@ footer {
  }
 
 .jumbotron-text-div {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.45);
   padding: 20px;
 }
 
