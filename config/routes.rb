@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 
   resource 'profiles', only: [:show, :edit], :path => "my-account"
 
+  
+
 
   resources :items do
     resources :join_table_item_cart
