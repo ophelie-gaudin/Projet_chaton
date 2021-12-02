@@ -13,7 +13,7 @@ class CartController < ApplicationController
       end
       @cart_total = total
     else
-      redirect_to "/"
+      redirect_to root_path
     end
 
   end
