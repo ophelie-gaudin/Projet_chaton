@@ -23,6 +23,11 @@
   <div class="d-flex justify-content-around flex-wrap">
 
 <%@items.each do |item|%>
+<%@validate =  item.id.in?(@iditemcart)%>
+<% puts @validate%>
+<% if @validate ==true %>
+
+<% else %>
   <div class='m-4 col-md-3' >
     <div class="card ">
       <h3 class="card-header" name='title'><%=item.title%></h3>
@@ -30,7 +35,7 @@
     <h5 class="card-title"><%=item.price%> €</h5>
 
     </div>
-    <img src="<%=item.image_url %>" class="d-block user-select-none" width="100%"  aria-label="Placeholder: Image cap" focusable="false" role="img" preserveAspectRatio="xMidYMid slice" viewBox="0 0 318 180" style="font-size:1.125rem;text-anchor:middle" %>
+      <img src="<%=item.image_url %>" class="d-block user-select-none" width="100%"  aria-label="Placeholder: Image cap" focusable="false" role="img" preserveAspectRatio="xMidYMid slice" viewBox="0 0 318 180" style="font-size:1.125rem;text-anchor:middle" %>
     <div class="card-body">
       <p class="card-text"><%=item.description%></p>
     </div>
@@ -38,8 +43,6 @@
       <%= link_to 'Voir la description', item_path(item.id), class:"btn btn-outline-info m-2"  %>   
 
       <%= link_to "Ajouter au panier", item_join_table_item_cart_index_path(item.id), method: :post, class:"btn btn-info m-2",:onclick => "alert('vous avez ajouté un article au panier')"%>
- 
-    
     </div>
 
   </div>
