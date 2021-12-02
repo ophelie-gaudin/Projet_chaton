@@ -21,7 +21,7 @@ body {
 }
 
 footer {
-  margin-top: auto;
+  margin-top: 70px;;
 }
 
  @import url("https://fonts.googleapis.com/css?family=Neucha|Cabin+Sketch&display=swap");
@@ -11809,22 +11809,30 @@ footer {
  .jumbotron{
   background-image: url('https://www.studyrama.com/local/cache-vignettes/L990xH363/arton6320-d004a.png?1607624234');
   text-align: center;
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 46vh;
-   
+  height: 50vh;   
+  display: flex;
+  align-items: center;
+  justify-content: center;
  }
 
+.jumbotron-text-div {
+  background-color: rgba(0, 0, 0, 0.45);
+  padding: 20px;
+}
+
+
  .content-holder {
-  position: absolute;
+  /* position: absolute;
   left: 50%!important;
-  z-index: 10;
+  z-index: 10; */
   color:rgb(255, 255, 255) ;
   text-align: center;
-  top: 25%!important;
+  /* top: 25%!important;
   transform: translate(-50%, -50%);
   width: fit-content;
   padding: 50px;
-  font-size: x-large;
+  font-size: x-large;*/
 }
