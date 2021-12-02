@@ -27,9 +27,10 @@
 
       <% if current_user %>
         <div class="d-flex ">
-          <a class="btn btn-secondary my-2 my-sm-0" href="<%=cart_path(current_user)%>">Panier</a>
+          <%= link_to "Panier #{current_user.cart.items.count}", cart_path(current_user), class:"btn btn-outline-secondary my-2 my-sm-0"%>
         </div>
       <% end %>
+      
     </div>
   </div>
 </nav>
