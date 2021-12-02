@@ -1,11 +1,54 @@
 <h1>Bienvenue sur votre page profil</h1>
 
-<div class="card">
-  <div class="card-body">
+<div class="card m-4">
+  <div class="card-body ">
     <h5>Votre adresse email est: <%=@user_email%> </h5>
     <a href="<%= edit_profiles_path %>" class="btn btn-success">Modifier vos informations</a>
-
   </div>
+</div>
+
+<div class="card m-4">
+  <h5 class="m-3">Vos commandes : </h5>
+    
+  <% @user_orders.each do |order| %>
+    <div class="list-group m-4">
+      <div class="d-flex list-group-item flex-column align-items-start">
+        
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Commande n° <%=order.id%> </h5>
+          <small class="text-muted"><%=order.updated_at%></small>
+        </div>
+        
+          <% order.items.each do |item|%>
+            <div class="d-flex" style="background: white">
+                <img src="<%=item.image_url%>" class="d-block user-select-none col-1" aria-label="Placeholder: Image cap" focusable="false" role="img" preserveAspectRatio="xMidYMid slice" viewBox="0 0 318 180" %>
+                <div class="col-9">
+                  <p class="mb-1"><%=item.title%></p>
+                  <small class="text-muted"><%=item.description%></small> </li>
+                </div>
+            </div>
+          <%end%>
+
+        <hr />
+        <div class="d-flex justify-content-end" style="width:100%">
+          <p class="mx-3">Total : <p>
+            <% @total = 0;
+              order.items.each do |item|
+                @total += item.price
+              end
+            %>
+
+          <h5> <%=@total%> € </h5>
+
+        </div>
+
+      </div>
+    </div>
+
+  <%end%>
+      
+
+
 </div>
 
 

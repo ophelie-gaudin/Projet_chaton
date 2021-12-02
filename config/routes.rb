@@ -8,13 +8,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :user , only: [:update]
   resources :cart
-
-
   resource 'profiles', only: [:show, :edit], :path => "my-account"
-
-  
-
-
   resources :items do
     resources :join_table_item_cart
   end
