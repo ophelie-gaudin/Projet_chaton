@@ -11838,3 +11838,12 @@ footer {
   padding: 50px;
   font-size: x-large;*/
 }
+
+hr {
+  border: 0;
+  clear:both;
+  display:block;
+  width: 96%;               
+  background-color:#000;
+  height: 1px;
+}
