@@ -13,16 +13,14 @@
     <p>
       ==========================================================
     </p>
-    Ta commande à bien été prise en compte !
     <p>
-      Voici le contenu de ta commande:
-      <% @items.each do |i| %>
-      - <%= i.title %>
-      - <img src="<%=i.image_url%>"/>
-      <% end %>
+    Merci pour ta commande sur notre boutique de chaton !
     </p>
     <p>
-      Conserve bien cet email, il te permet de récupérer tes photos.
+    Ton achat numéro <%= @order.id %> a bien été confirmé.
+    <p>
+    <p>
+    Conserve bien cet email, il te permet de récupérer tes photos.
     </p>
     <p> À très bientôt !
     </p>

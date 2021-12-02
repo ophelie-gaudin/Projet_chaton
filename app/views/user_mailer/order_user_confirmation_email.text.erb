@@ -1,13 +1,9 @@
-Ta commande a bien été pris en compte !
+Merci pour ta commande sur notre boutique de chaton !
 ==========================================================
  
-Voici le contenu de ta commande:
-<% @items.each do |i| %>
-  - <%= i.title %>
-  - <img src="<%=i.image_url%>"/>
-  <% end %>
+Ton achat numéro <%= @order.id %> a bien été confirmé.
   
  
-Conserve bien cet email, il te permet de récupérer tes photos.
+Conserve bien cet email, il te permet de récupérer tes photos ici : <%= @url %>
  
 À très bientôt !

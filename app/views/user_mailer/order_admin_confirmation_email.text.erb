@@ -5,14 +5,12 @@ Vous avez une nouvelle commande sur La Boutique ChatShop !
 ==========================================================
 
 
-Ta commande à bien été prise en compte !
+Merci pour ta commande sur notre boutique de chaton !
 ==========================================================
  
-Voici le contenu de ta commande:
-<% @items.each do |i| %>
-    - <%= i.title %>
-    - <img src="<%=i.image_url%>"/>
-  <% end %>
+<p>
+    Ton achat numéro <%= @order.id %> a bien été confirmé.
+    <p>
   
  
 Conserve bien cet email, il te permet de récupérer tes photos.
