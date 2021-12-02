@@ -14,7 +14,11 @@
   <body>
     <%= render 'layouts/navbar' %>
     <%= render 'layouts/flash'%>
+    
+    <div>
     <%= yield %>
+    </div>
+
     <footer id="footer" class="container">
       <%= render 'layouts/footer' %>
     </footer>

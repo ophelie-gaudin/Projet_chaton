@@ -52,7 +52,7 @@ puts @amount
     rescue Stripe::CardError => e
     flash[:error] = e.message
     redirect_to new_order_path
-    end
+    # end
     
     # After the rescue, if the payment succeeded
     @order = Order.create(user: current_user)
