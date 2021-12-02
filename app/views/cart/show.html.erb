@@ -1,69 +1,59 @@
 <% if @items.empty? == false%>
-<div class="m-4">
-<h1>Mon panier : </h1>
-
-<ul class="list-group list-group-flush">
-<%@items.each do |item|%>
-  <li class="list-group-item">
-
-    <div class="row d-flex">
-        <img src="<%=item.image_url%>" class="d-block user-select-none col-1" aria-label="Placeholder: Image cap" focusable="false" role="img" preserveAspectRatio="xMidYMid slice" viewBox="0 0 318 180" %>
-      <div class="col-11 d-flex justify-content-between align-items-center">
-        
-        <h5><%= item.title%></h5>
-       
-        <div class="d-flex justify-content-end col-8 m-1 ">
-          <h4><%=item.price%> €</h4> 
-          <div class="m-2">
-            <%= link_to 'Voir la description', item_path(item.id), class:"btn btn-outline-info"  %>
-            <%= link_to "Supprimer du panier", item_join_table_item_cart_path(item.id), method: :delete, class:"btn btn-danger" %>
+  <div class="m-4">
+    <h1>Mon panier : </h1>
+      <ul class="list-group list-group-flush">
+      <%@items.each do |item|%>
+        <li class="list-group-item">
+          <div class="row d-flex">
+           <img src="<%=item.image_url%>" class="d-block user-select-none col-1" aria-label="Placeholder: Image cap" focusable="false" role="img" preserveAspectRatio="xMidYMid slice" viewBox="0 0 318 180" %>
+            <div class="col-11 d-flex justify-content-between align-items-center">
+              <h5><%= item.title%></h5>
+                <div class="d-flex justify-content-end col-8 m-1 ">
+                 <h4><%=item.price%> €</h4> 
+                  <div class="m-2">
+                    <%= link_to 'Voir la description', item_path(item.id), class:"btn btn-outline-info"  %>
+                    <%= link_to "Supprimer du panier", item_join_table_item_cart_path(item.id), method: :delete, class:"btn btn-danger" %>
+                  </div>
+                </div>
+            </div>
           </div>
-        </div>
-
-      </div>
-
-
-
-    </div>
-
-  </li>
-  <%end%>
-</ul>
-<br />
+        </li>
+     <%end%>
+    </ul>
+ </div>
 
 <div class="d-flex flex-column align-items-end">
+  <div class="m-4">
+    <h5> Total de la commande : </h5>
+    <h2><%=@cart_total%> € </h2>
+  </div>
+  <br />
+  <br />
+    <div>
 
-<div class="m-4">
-<h5> Total de la commande : </h5>
-<h2><%=@cart_total%> € </h2>
-</div>
-<br />
-<br />
-<div>
+    <%= form_tag checkout_index_path do %>
+    <article>
+      <% if flash[:error].present? %>
+      <div id="error_explanation">
+        <p><%= flash[:error] %></p>
+      </div>
+      <% end %>
+      <label class="amount">
+      <span></span>
+      </label>
+    </article>  
 
-<%= form_tag checkout_index_path do %>
-<article>
-  <% if flash[:error].present? %>
-    <div id="error_explanation">
-      <p><%= flash[:error] %></p>
-    </div>
-  <% end %>
-  <label class="amount">
-    <span></span>
-  </label>
-</article>  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" 
   data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
   data-description="Achat d'un produit"
+  data-label="Payer son Panier"
   data-amount= <%= @stripe_amount %>
-  <% puts @stripe_amount%>
   data-currency="eur"
   data-locale="auto"></script>
+  <% end %>
 
-
-<% end %>
-
-</div>
-</div>
+    </div>
+  </div>
 </div>
 <%else%>
 <h1>Votre panier est actuellement vide </h1>

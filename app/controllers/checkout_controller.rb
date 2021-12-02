@@ -6,18 +6,15 @@ class CheckoutController < ApplicationController
     @stripe_amount = 500
     @user = current_user.id
     @items = @card.items
-    puts @items
-    puts '----------------------------------------'
     total = 0
     @items.each do |item|
       total += item.price
       end
     @cart_total = total
-    
     @amount = @cart_total
-    puts @amount
+  
     @stripe_amount = (@amount * 100).to_i
-    puts @stripe_amount
+    
   end
 
   def create
@@ -33,9 +30,9 @@ class CheckoutController < ApplicationController
     @cart_total = total
 
     @amount = @cart_total
-    puts @amount
+    
     @stripe_amount = (@amount * 100).to_i
-    puts @stripe_amount
+ 
     
     begin
     customer = Stripe::Customer.create({
