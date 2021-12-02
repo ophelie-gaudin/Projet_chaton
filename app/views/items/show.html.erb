@@ -18,11 +18,7 @@
           <p class="card-text description"><%=@item.description%></p>
         </div>
 
-      <!--
-        <a href="/items/<%=@item.id%>/join_table_item_cart" data-method="POST">
-        <button type="button" class="btn btn-info">Acheter</button>
-        </a>
-      -->
+     
       
         <%= link_to "Ajouter au panier", item_join_table_item_cart_index_path(@item.id), method: :post, class:"btn btn-info m-4" %>
        

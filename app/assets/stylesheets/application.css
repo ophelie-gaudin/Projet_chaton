@@ -21,8 +21,7 @@ body {
 }
 
 footer {
-  margin-top: auto;
-  padding-top: 70px;
+  margin-top: 70px;;
 }
 
  @import url("https://fonts.googleapis.com/css?family=Neucha|Cabin+Sketch&display=swap");
@@ -11808,7 +11807,7 @@ footer {
    border-radius: 255px 25px 225px 25px/25px 225px 25px 255px;
  }
  .jumbotron{
-  background-image: url('https://www.studyrama.com/local/cache-vignettes/L990xH363/arton6320-d004a.png?1607624234');
+  background-image: url('https://www.buymougins.fr/img/c/23-thumbnail-category-large.jpg');
   text-align: center;
   background-position: top;
   background-repeat: no-repeat;
@@ -11831,7 +11830,6 @@ footer {
   z-index: 10; */
   color:rgb(255, 255, 255) ;
   text-align: center;
-  max-width: 80%;
   /* top: 25%!important;
   transform: translate(-50%, -50%);
   width: fit-content;
