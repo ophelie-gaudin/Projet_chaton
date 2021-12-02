@@ -15,6 +15,7 @@ class CartController < ApplicationController
 
       @items.each do |item|
         total += item.price
+  
       end
 
       @cart_total = total
