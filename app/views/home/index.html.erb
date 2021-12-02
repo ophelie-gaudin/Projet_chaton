@@ -33,12 +33,9 @@
       <h3 class="card-header" name='title'><%=item.title%></h3>
     <div class="card-body">
     <h5 class="card-title"><%=item.price%> €</h5>
-
     </div>
+    
       <img src="<%=item.image_url %>" class="d-block user-select-none" width="100%"  aria-label="Placeholder: Image cap" focusable="false" role="img" preserveAspectRatio="xMidYMid slice" viewBox="0 0 318 180" style="font-size:1.125rem;text-anchor:middle" %>
-    <div class="card-body">
-      <p class="card-text"><%=item.description%></p>
-    </div>
     <div class="card-body d-flex flex-column align-items-center">
       <%= link_to 'Voir la description', item_path(item.id), class:"btn btn-outline-info m-2"  %>   
 
