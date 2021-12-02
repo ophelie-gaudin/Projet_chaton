@@ -23,8 +23,10 @@ class JoinTableItemCartController < ApplicationController
   end
 
   def create
-    @relation = JoinTableItemCart.create(cart_id: Cart.find_by(user_id: current_user.id).id, item_id: Item.find(params[:item_id].to_i).id)
-   
+    if(JoinTableItemCart.where(cart_id: Cart.find_by(user_id: current_user.id)).find_by(item_id: Item.find(params[:item_id].to_i).id))
+    else
+      @relation = JoinTableItemCart.create(cart_id: Cart.find_by(user_id: current_user.id).id, item_id: Item.find(params[:item_id].to_i).id)
+    end
     
     
   end
