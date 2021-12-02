@@ -56,8 +56,8 @@ class CheckoutController < ApplicationController
       flash[:error] = e.message
       redirect_to new_checkout_path
     end
-    
-# After the rescue, if the payment succeeded
+    #Order.create(stripe_customer_id: customer.id, customer: current_user, ) if charge.paid
+    #After the rescue, if the payment succeeded
     @relations= JoinTableItemCart.where(cart_id: Cart.find_by(user_id: current_user.id).id).destroy_all
   
   end
