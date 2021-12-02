@@ -1,4 +1,4 @@
-class OrdersController < ApplicationController
+class CheckoutController < ApplicationController
   def new
     @card = Cart.find_by(user_id: current_user.id)
     @stripe_amount = 500
@@ -57,5 +57,9 @@ puts @amount
 # After the rescue, if the payment succeeded
   @relations= JoinTableItemCart.where(cart_id: Cart.find_by(user_id: current_user.id).id).destroy_all
   
+  end
+
+  def success
+    @order = Order.create(user: current_user)
   end
 end
