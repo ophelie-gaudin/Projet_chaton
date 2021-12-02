@@ -1,6 +1,7 @@
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/">Home</a>
+    <a class="navbar-brand" href="/">ChatonShop</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -9,17 +10,17 @@
       <ul class="navbar-nav me-auto">
         <% if current_user %>
           <li class="nav-item">
-            <a class="nav-link" href="<%=profiles_path%>">Profile</a>
+            <a class="nav-link" href="<%=profiles_path%>">Mon compte</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<%=destroy_user_session_path%>" data-method="delete">Sign out</a>
+            <a class="nav-link" href="<%=destroy_user_session_path%>" data-method="delete">Déconnexion</a>
           </li>
         <% else %>
           <li class="nav-item">
-            <a class="nav-link" href="<%=new_user_registration_path%>">sign up</a>
+            <a class="nav-link" href="<%=new_user_registration_path%>">Inscription</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<%=new_user_session_path%>">sign in</a>
+            <a class="nav-link" href="<%=new_user_session_path%>">Connexion</a>
           </li>
         <% end %>
       </ul>
