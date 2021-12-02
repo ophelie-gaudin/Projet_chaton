@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :home
   root to: 'home#index'
   devise_for :users
-  resources :user 
+  resources :user
   resources :cart
 
   resources :items do
