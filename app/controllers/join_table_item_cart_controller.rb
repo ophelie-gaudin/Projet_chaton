@@ -15,6 +15,8 @@ class JoinTableItemCartController < ApplicationController
     puts "################"
     puts @relation
     puts "relation établie! :)"
+    
+    
   end
   
 end
