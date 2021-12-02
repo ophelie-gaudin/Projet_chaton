@@ -1,25 +1,25 @@
-<h1>Edit your email address</h1>
+<h1>Modifie ton adresse mail</h1>
 
 <%= form_for @user do |f| %>
   <div class="form-group">
-  <label>Email address</label>
+  <label>Adresse mail</label>
   <%= f.text_field :email, class: 'form-control'%>
   </div>
   <div class="form-group">
-  <button type="submit" class="btn btn-primary">Update your Email address</button>
+  <button type="submit" class="btn btn-primary">Mets à jour ton adresse mail</button>
   </div>
 <% end %>
 <br>
 
 <%= form_for @user do |f| %>
   <div class="form-group">
-  <label>Password</label>
+  <label>Mot de passe</label>
   <div class="form-floating">
     <%= f.text_field :password, class: 'form-control', type: 'password'%>
-    <label for="floatingPassword">New password</label>
+    <label for="floatingPassword">Nouveau mot de passe</label>
   </div>
   </div>
   <div class="form-group">
-  <button type="submit" class="btn btn-primary">Update your password</button>
+  <button type="submit" class="btn btn-primary">Mets à jour ton mot de passe</button>
   </div>
 <% end %>
