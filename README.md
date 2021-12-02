@@ -1,4 +1,5 @@
 # Projet Chaton UwU
 
-lien : https://chatonshop-prod.herokuapp.com/
+lien production : https://chatonshop-prod.herokuapp.com/
 
+lien dev : https://chatonshop-dev.herokuapp.com/
