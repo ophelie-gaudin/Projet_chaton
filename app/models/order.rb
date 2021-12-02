@@ -6,7 +6,7 @@ class Order < ApplicationRecord
 
   # after_create :order_user_email
   # after_create :order_admin_email
-  private
+  #private
 
   # def order_user_email
   #   UserMailer.order_user_confirmation_email(self).deliver_now

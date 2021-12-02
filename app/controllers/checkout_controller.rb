@@ -33,7 +33,8 @@ class CheckoutController < ApplicationController
       total += item.price
     end
     @cart_total = total
-  
+    
+    begin
     customer = Stripe::Customer.create({
     email: params[:stripeEmail],
     source: params[:stripeToken],
@@ -46,12 +47,19 @@ class CheckoutController < ApplicationController
     })
     
     rescue Stripe::CardError => e
-    flash[:error] = e.message
-    redirect_to new_order_path
+      flash[:error] = e.message
+      redirect_to new_order_path   
     end
-    
+
+    puts "#testorder" *60
+    puts "#testorder" *60
     # After the rescue, if the payment succeeded
-    @order = Order.create(user: current_user)
+    @order = Order.create(user_id: current_user.id)
+    puts "/" *60
+    puts "/" *60
+    UserMailer.order_user_email(current_user, @order).deliver_now
+    puts "$" *60
+    puts "$" *60
 
     @items.each do |item|
       JoinTableOrderItem.create(item_id: item.id, order_id: @order.id)
@@ -60,5 +68,7 @@ class CheckoutController < ApplicationController
     JoinTableItemCart.where(cart_id: Cart.find_by(user_id: current_user.id).id).destroy_all
   end
 
+  def success
 
+  end
 end
