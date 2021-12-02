@@ -16,6 +16,5 @@ class CartController < ApplicationController
     end
 
   end
-
   
 end

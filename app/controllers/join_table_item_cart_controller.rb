@@ -5,8 +5,21 @@ class JoinTableItemCartController < ApplicationController
     cart_id = Cart.find_by(user_id: current_user.id).id
   
     JoinTableItemCart.where(cart_id: cart_id, item_id: params[:item_id]).destroy_all
-    redirect_to cart_path
+    #redirect_to cart_path
+    @item = Item.find(params[:item_id])
 
+    @cart = Cart.find(params[:id])
+    @items = @cart.items
+    total = 0
+    @items.each do |item|
+      total += item.price
+    end
+    @cart_total = total
+
+    respond_to do |format|
+        format.html {redirect_to cart_path(current_user)}
+        format.js {}
+      end
   end
 
   def create
