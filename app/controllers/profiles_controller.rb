@@ -5,7 +5,8 @@ class ProfilesController < ApplicationController
     @user = current_user
     @user_email = current_user.email
 
-    @user_orders = Order.select{ |order| order.user_id = current_user.id }
+    @user_orders = Order.where(user_id: current_user.id)
+
     
 
 
